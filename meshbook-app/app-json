@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "MESHBOOK",
+    "slug": "meshbook",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.meshbook.app",
+      "infoPlist": {
+        "NSBonjourServices": ["_meshbook._tcp"],
+        "NSLocalNetworkUsageDescription": "MESHBOOK يحتاج للشبكة المحلية للاتصال بالأجهزة القريبة بدون إنترنت"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f172a"
+      },
+      "package": "com.meshbook.app",
+      "permissions": [
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE",
+        "CHANGE_WIFI_MULTICAST_STATE",
+        "NEARBY_WIFI_DEVICES"
+      ]
+    },
+    "plugins": [
+      "@react-native-async-storage/async-storage",
+      "expo-image-picker",
+      "expo-media-library"
+    ]
+  }
+}
